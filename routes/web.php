@@ -21,7 +21,7 @@ Route::get('/landing-page', function () {
     return view('2_LandingPage');
 });
 
-Route::get('/crm-goup', function () {
+Route::get('/crm-group', function () {
     return view('3_CrmGroup');
 });
 
