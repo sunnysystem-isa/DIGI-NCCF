@@ -76,17 +76,17 @@
                 <label for="card-expired-date">Card Expired Date:</label>
                 <input type="date" name="card-expired-date" class="form-control">
             </div>
-            <div class="col">
+            <div class="col-2">
                 <div class="d-flex justify-content-start align-items-center">
-                    <div class="bg-white border border-3 border-dark col-6 me-5" style="height: 50px"></div>
+                    <div class="bg-white border border-3 border-dark col-6 me-5" style="height: 30px"></div>
                     <p class="my-2"><b>Not Activated</b></p>
                 </div>
                 <div class="d-flex justify-content-start align-items-center my-3">
-                    <div class="bg-activated border border-3 border-dark col-6 me-5" style="height: 50px"></div>
-                    <p class="my-2"><b>Activated</b></p>                    
+                    <div class="bg-activated border border-3 border-dark col-6 me-5" style="height: 30px"></div>
+                    <p class="my-2"><b>Activated</b></p>
                 </div>
                 <div class="d-flex justify-content-start align-items-center">
-                    <div class="bg-cancelled border border-3 border-dark col-6 me-5" style="height: 50px"></div>
+                    <div class="bg-cancelled border border-3 border-dark col-6 me-5" style="height: 30px"></div>
                     <p class="my-2"><b>Cancelled</b></p>
                 </div>
                 <br>
