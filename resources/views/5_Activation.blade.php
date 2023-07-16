@@ -25,6 +25,10 @@
     <!--begin::Body Main Page -->
     <div class="container-fluid mt-12">
 
+        @php
+            $faker = Faker\Factory::create();
+        @endphp
+
         <!--begin::Header-->
         <div class="row">
             <div class="col">
@@ -159,49 +163,51 @@
                 </thead>
 
                 <tbody>
-                    <tr>
-                        <td class="border border-dark" style="background-color: rgba(81, 177, 215, 0.556)">test 1</td>
-                        <td class="border border-dark" style="background-color: rgba(81, 177, 215, 0.556)">test 2</td>
-                        <td class="border border-dark" style="background-color: rgba(81, 177, 215, 0.556)">test 3</td>
-                        <td class="border border-dark" style="background-color: rgba(81, 177, 215, 0.556)">test 4</td>
-                        <td class="border border-dark" style="background-color: rgba(81, 177, 215, 0.556)">test 5</td>
-                        <td class="border border-dark" style="background-color: rgba(81, 177, 215, 0.556)">test 6</td>
-                        <td class="border border-dark" style="background-color: rgba(81, 177, 215, 0.556)">test 7</td>
-                        <td class="border border-dark" style="background-color: rgba(81, 177, 215, 0.556)">test 8</td>
-                        <td class="border border-dark" style="background-color: rgba(81, 177, 215, 0.556)">test 9</td>
-                        <td class="border border-dark" style="background-color: rgba(81, 177, 215, 0.556)">test 10</td>
-                        <td class="border border-dark" style="background-color: rgba(81, 177, 215, 0.556)">test 11</td>
-                        <td class="border border-dark" style="background-color: rgba(81, 177, 215, 0.556)">test 12</td>
-                        <td class="border border-dark" style="background-color: rgba(81, 177, 215, 0.556)">test 13</td>
-                        <td class="border border-dark" style="background-color: rgba(81, 177, 215, 0.556)">test 14</td>
-                        <td class="border border-dark" style="background-color: rgba(81, 177, 215, 0.556)">test 15</td>
-                        <td class="border border-dark" style="background-color: rgba(81, 177, 215, 0.556)">test 16</td>
-                        <td class="border border-dark" style="background-color: rgba(81, 177, 215, 0.556)">test 17</td>
-                        <td class="border border-dark" style="background-color: rgba(81, 177, 215, 0.556)">test 18</td>
-                        <td class="border border-dark" style="background-color: rgba(81, 177, 215, 0.556)">test 19</td>
-                        <td class="border border-dark" style="background-color: rgba(81, 177, 215, 0.556)">test 20</td>
-                        <td class="border border-dark" style="background-color: rgba(81, 177, 215, 0.556)">test 21</td>
-                        <td class="border border-dark" style="background-color: rgba(81, 177, 215, 0.556)">test 22</td>
-                        <td class="border border-dark" style="background-color: rgba(81, 177, 215, 0.556)">test 23</td>
-                        <td class="border border-dark" style="background-color: rgba(81, 177, 215, 0.556)">test 24</td>
-                        <td class="border border-dark" style="background-color: rgba(81, 177, 215, 0.556)">test 25</td>
-                        <td class="border border-dark" style="background-color: rgba(81, 177, 215, 0.556)">test 26</td>
-                        <td class="border border-dark" style="background-color: rgba(81, 177, 215, 0.556)">test 27</td>
-                        <td class="border border-dark" style="background-color: rgba(81, 177, 215, 0.556)">test 28</td>
-                        <td class="border border-dark" style="background-color: rgba(81, 177, 215, 0.556)">test 29</td>
-                        <td class="border border-dark" style="background-color: rgba(81, 177, 215, 0.556)">test 30</td>
-                        <td class="border border-dark" style="background-color: rgba(81, 177, 215, 0.556)">test 31</td>
-                        <td class="border border-dark" style="background-color: rgba(81, 177, 215, 0.556)">test 32</td>
-                        <td class="border border-dark" style="background-color: rgba(81, 177, 215, 0.556)">test 33</td>
-                        <td class="border border-dark" style="background-color: rgba(81, 177, 215, 0.556)">test 34</td>
-                        <td class="border border-dark" style="background-color: rgba(81, 177, 215, 0.556)">test 35</td>
-                        <td class="border border-dark" style="background-color: rgba(81, 177, 215, 0.556)">test 36</td>
-                        <td class="border border-dark" style="background-color: rgba(81, 177, 215, 0.556)">test 37</td>
-                        <td class="border border-dark" style="background-color: rgba(81, 177, 215, 0.556)">test 38</td>
-                        <td class="border border-dark" style="background-color: rgba(81, 177, 215, 0.556)">test 39</td>
-                        <td class="border border-dark" style="background-color: rgba(81, 177, 215, 0.556)">test 40</td>
-                        <td class="border border-dark" style="background-color: rgba(81, 177, 215, 0.556)">test 41</td>
+                    @for ($i=1;$i<=1;$i++)
+                    <tr  style="background-color: rgba(81, 177, 215, 0.556)">
+                        <td class="border boder-dark">{{ $i }}</td>
+                        <td class="border boder-dark">{{ $faker->numerify('2####') }}</td>
+                        <td class="border boder-dark">COP</td>
+                        <td class="border boder-dark">{{ $faker->numerify('896#########') }}</td>
+                        <td class="border boder-dark">{{ $faker->numerify('01#####') }}</td>
+                        <td class="border boder-dark">N</td>
+                        <td class="border boder-dark">C</td>
+                        <td class="border boder-dark">24</td>
+                        <td class="border boder-dark">{{ $faker->numerify('#000') }}</td>
+                        <td class="border boder-dark">Go DIGI</td>
+                        <td class="border boder-dark">4G Mobile Internet</td>
+                        <td class="border boder-dark">IDD</td>
+                        <td class="border boder-dark">SMS</td>
+                        <td class="border boder-dark">International Roaming</td>
+                        <td class="border boder-dark">Go DIGI 168 Data Bundle</td>
+                        <td class="border boder-dark">MI Go Digi Unlimited</td>
+                        <td class="border boder-dark">Contract Go Digi 168</td>
+                        <td class="border boder-dark">EB-S-{{ $faker->company() }}APR23</td>
+                        <td class="border boder-dark">Vo-LTE</td>
+                        <td class="border boder-dark">Monthly-Unlimited Singapore-FREE</td>
+                        <td class="border boder-dark">Go IDD168-Free Bundle</td>
+                        <td class="border boder-dark">Monthly-GoIDDAsia300mins-FREE</td>
+                        <td class="border boder-dark">Go Roam168-Free Bundle</td>
+                        <td class="border boder-dark">Monthly_GoRoamAdvance - (Free)</td>
+                        <td class="border boder-dark">-</td>
+                        <td class="border boder-dark">-</td>
+                        <td class="border boder-dark">-</td>
+                        <td class="border boder-dark">-</td>
+                        <td class="border boder-dark">-</td>
+                        <td class="border boder-dark">-</td>
+                        <td class="border boder-dark">MAXIS</td>
+                        <td class="border boder-dark">BRN</td>
+                        <td class="border boder-dark">{{ $faker->numerify('200########') }}</td>
+                        <td class="border boder-dark">{{ $faker->company() }}</td>
+                        <td class="border boder-dark">{{ $faker->numerify('########') }}</td>
+                        <td class="border boder-dark">-</td>
+                        <td class="border boder-dark"><input type="checkbox"></td>
+                        <td class="border boder-dark"><a href="#">{{ $faker->date() }}</a></td>
+                        <td class="border boder-dark">Activated</td>
+                        <td class="border boder-dark"><a href="#"><i class="bi bi-pencil-fill text-dark"></i></a></td>
+                        <td class="border boder-dark"><a href="#"><i class="bi bi-x-square-fill text-danger"></i></i></a></td>
                     </tr>
+                    @endfor
                 </tbody>
             </table>
         </div>
@@ -270,49 +276,51 @@
                 </thead>
 
                 <tbody>
-                    <tr>
-                        <td class="border border-dark" style="background-color: rgba(81, 177, 215, 0.556)">test 1</td>
-                        <td class="border border-dark" style="background-color: rgba(81, 177, 215, 0.556)">test 2</td>
-                        <td class="border border-dark" style="background-color: rgba(81, 177, 215, 0.556)">test 3</td>
-                        <td class="border border-dark" style="background-color: rgba(81, 177, 215, 0.556)">test 4</td>
-                        <td class="border border-dark" style="background-color: rgba(81, 177, 215, 0.556)">test 5</td>
-                        <td class="border border-dark" style="background-color: rgba(81, 177, 215, 0.556)">test 6</td>
-                        <td class="border border-dark" style="background-color: rgba(81, 177, 215, 0.556)">test 7</td>
-                        <td class="border border-dark" style="background-color: rgba(81, 177, 215, 0.556)">test 8</td>
-                        <td class="border border-dark" style="background-color: rgba(81, 177, 215, 0.556)">test 9</td>
-                        <td class="border border-dark" style="background-color: rgba(81, 177, 215, 0.556)">test 10</td>
-                        <td class="border border-dark" style="background-color: rgba(81, 177, 215, 0.556)">test 11</td>
-                        <td class="border border-dark" style="background-color: rgba(81, 177, 215, 0.556)">test 12</td>
-                        <td class="border border-dark" style="background-color: rgba(81, 177, 215, 0.556)">test 13</td>
-                        <td class="border border-dark" style="background-color: rgba(81, 177, 215, 0.556)">test 14</td>
-                        <td class="border border-dark" style="background-color: rgba(81, 177, 215, 0.556)">test 15</td>
-                        <td class="border border-dark" style="background-color: rgba(81, 177, 215, 0.556)">test 16</td>
-                        <td class="border border-dark" style="background-color: rgba(81, 177, 215, 0.556)">test 17</td>
-                        <td class="border border-dark" style="background-color: rgba(81, 177, 215, 0.556)">test 18</td>
-                        <td class="border border-dark" style="background-color: rgba(81, 177, 215, 0.556)">test 19</td>
-                        <td class="border border-dark" style="background-color: rgba(81, 177, 215, 0.556)">test 20</td>
-                        <td class="border border-dark" style="background-color: rgba(81, 177, 215, 0.556)">test 21</td>
-                        <td class="border border-dark" style="background-color: rgba(81, 177, 215, 0.556)">test 22</td>
-                        <td class="border border-dark" style="background-color: rgba(81, 177, 215, 0.556)">test 23</td>
-                        <td class="border border-dark" style="background-color: rgba(81, 177, 215, 0.556)">test 24</td>
-                        <td class="border border-dark" style="background-color: rgba(81, 177, 215, 0.556)">test 25</td>
-                        <td class="border border-dark" style="background-color: rgba(81, 177, 215, 0.556)">test 26</td>
-                        <td class="border border-dark" style="background-color: rgba(81, 177, 215, 0.556)">test 27</td>
-                        <td class="border border-dark" style="background-color: rgba(81, 177, 215, 0.556)">test 28</td>
-                        <td class="border border-dark" style="background-color: rgba(81, 177, 215, 0.556)">test 29</td>
-                        <td class="border border-dark" style="background-color: rgba(81, 177, 215, 0.556)">test 30</td>
-                        <td class="border border-dark" style="background-color: rgba(81, 177, 215, 0.556)">test 31</td>
-                        <td class="border border-dark" style="background-color: rgba(81, 177, 215, 0.556)">test 32</td>
-                        <td class="border border-dark" style="background-color: rgba(81, 177, 215, 0.556)">test 33</td>
-                        <td class="border border-dark" style="background-color: rgba(81, 177, 215, 0.556)">test 34</td>
-                        <td class="border border-dark" style="background-color: rgba(81, 177, 215, 0.556)">test 35</td>
-                        <td class="border border-dark" style="background-color: rgba(81, 177, 215, 0.556)">test 36</td>
-                        <td class="border border-dark" style="background-color: rgba(81, 177, 215, 0.556)">test 37</td>
-                        <td class="border border-dark" style="background-color: rgba(81, 177, 215, 0.556)">test 38</td>
-                        <td class="border border-dark" style="background-color: rgba(81, 177, 215, 0.556)">test 39</td>
-                        <td class="border border-dark" style="background-color: rgba(81, 177, 215, 0.556)">test 40</td>
-                        <td class="border border-dark" style="background-color: rgba(81, 177, 215, 0.556)">test 41</td>
+                    @for ($i=1;$i<=2;$i++)
+                    <tr  style="background-color: rgba(81, 177, 215, 0.556)">
+                        <td class="border boder-dark">{{ $i }}</td>
+                        <td class="border boder-dark">{{ $faker->numerify('2####') }}</td>
+                        <td class="border boder-dark">A2B</td>
+                        <td class="border boder-dark">{{ $faker->numerify('896#########') }}</td>
+                        <td class="border boder-dark">{{ $faker->numerify('01#####') }}</td>
+                        <td class="border boder-dark">N</td>
+                        <td class="border boder-dark">C</td>
+                        <td class="border boder-dark">24</td>
+                        <td class="border boder-dark">{{ $faker->numerify('#000') }}</td>
+                        <td class="border boder-dark">Go DIGI</td>
+                        <td class="border boder-dark">4G Mobile Internet</td>
+                        <td class="border boder-dark">IDD</td>
+                        <td class="border boder-dark">SMS</td>
+                        <td class="border boder-dark">International Roaming</td>
+                        <td class="border boder-dark">Go DIGI 168 Data Bundle</td>
+                        <td class="border boder-dark">MI Go Digi Unlimited</td>
+                        <td class="border boder-dark">Contract Go Digi 168</td>
+                        <td class="border boder-dark">EB-S-{{ $faker->company() }}APR23</td>
+                        <td class="border boder-dark">Vo-LTE</td>
+                        <td class="border boder-dark">Monthly-Unlimited Singapore-FREE</td>
+                        <td class="border boder-dark">Go IDD168-Free Bundle</td>
+                        <td class="border boder-dark">Monthly-GoIDDAsia300mins-FREE</td>
+                        <td class="border boder-dark">Go Roam168-Free Bundle</td>
+                        <td class="border boder-dark">Monthly_GoRoamAdvance - (Free)</td>
+                        <td class="border boder-dark">-</td>
+                        <td class="border boder-dark">-</td>
+                        <td class="border boder-dark">-</td>
+                        <td class="border boder-dark">-</td>
+                        <td class="border boder-dark">-</td>
+                        <td class="border boder-dark">-</td>
+                        <td class="border boder-dark">MAXIS</td>
+                        <td class="border boder-dark">BRN</td>
+                        <td class="border boder-dark">{{ $faker->numerify('200########') }}</td>
+                        <td class="border boder-dark">{{ $faker->company() }}</td>
+                        <td class="border boder-dark">{{ $faker->numerify('########') }}</td>
+                        <td class="border boder-dark">-</td>
+                        <td class="border boder-dark"><input type="checkbox"></td>
+                        <td class="border boder-dark"><a href="#">{{ $faker->date() }}</a></td>
+                        <td class="border boder-dark">Activated</td>
+                        <td class="border boder-dark"><a href="#"><i class="bi bi-pencil-fill text-dark"></i></a></td>
+                        <td class="border boder-dark"><a href="#"><i class="bi bi-x-square-fill text-danger"></i></i></a></td>
                     </tr>
+                    @endfor
                 </tbody>
             </table>
         </div>
@@ -381,49 +389,51 @@
                 </thead>
 
                 <tbody>
-                    <tr>
-                        <td class="border border-dark" style="background-color: rgba(81, 177, 215, 0.556)">test 1</td>
-                        <td class="border border-dark" style="background-color: rgba(81, 177, 215, 0.556)">test 2</td>
-                        <td class="border border-dark" style="background-color: rgba(81, 177, 215, 0.556)">test 3</td>
-                        <td class="border border-dark" style="background-color: rgba(81, 177, 215, 0.556)">test 4</td>
-                        <td class="border border-dark" style="background-color: rgba(81, 177, 215, 0.556)">test 5</td>
-                        <td class="border border-dark" style="background-color: rgba(81, 177, 215, 0.556)">test 6</td>
-                        <td class="border border-dark" style="background-color: rgba(81, 177, 215, 0.556)">test 7</td>
-                        <td class="border border-dark" style="background-color: rgba(81, 177, 215, 0.556)">test 8</td>
-                        <td class="border border-dark" style="background-color: rgba(81, 177, 215, 0.556)">test 9</td>
-                        <td class="border border-dark" style="background-color: rgba(81, 177, 215, 0.556)">test 10</td>
-                        <td class="border border-dark" style="background-color: rgba(81, 177, 215, 0.556)">test 11</td>
-                        <td class="border border-dark" style="background-color: rgba(81, 177, 215, 0.556)">test 12</td>
-                        <td class="border border-dark" style="background-color: rgba(81, 177, 215, 0.556)">test 13</td>
-                        <td class="border border-dark" style="background-color: rgba(81, 177, 215, 0.556)">test 14</td>
-                        <td class="border border-dark" style="background-color: rgba(81, 177, 215, 0.556)">test 15</td>
-                        <td class="border border-dark" style="background-color: rgba(81, 177, 215, 0.556)">test 16</td>
-                        <td class="border border-dark" style="background-color: rgba(81, 177, 215, 0.556)">test 17</td>
-                        <td class="border border-dark" style="background-color: rgba(81, 177, 215, 0.556)">test 18</td>
-                        <td class="border border-dark" style="background-color: rgba(81, 177, 215, 0.556)">test 19</td>
-                        <td class="border border-dark" style="background-color: rgba(81, 177, 215, 0.556)">test 20</td>
-                        <td class="border border-dark" style="background-color: rgba(81, 177, 215, 0.556)">test 21</td>
-                        <td class="border border-dark" style="background-color: rgba(81, 177, 215, 0.556)">test 22</td>
-                        <td class="border border-dark" style="background-color: rgba(81, 177, 215, 0.556)">test 23</td>
-                        <td class="border border-dark" style="background-color: rgba(81, 177, 215, 0.556)">test 24</td>
-                        <td class="border border-dark" style="background-color: rgba(81, 177, 215, 0.556)">test 25</td>
-                        <td class="border border-dark" style="background-color: rgba(81, 177, 215, 0.556)">test 26</td>
-                        <td class="border border-dark" style="background-color: rgba(81, 177, 215, 0.556)">test 27</td>
-                        <td class="border border-dark" style="background-color: rgba(81, 177, 215, 0.556)">test 28</td>
-                        <td class="border border-dark" style="background-color: rgba(81, 177, 215, 0.556)">test 29</td>
-                        <td class="border border-dark" style="background-color: rgba(81, 177, 215, 0.556)">test 30</td>
-                        <td class="border border-dark" style="background-color: rgba(81, 177, 215, 0.556)">test 31</td>
-                        <td class="border border-dark" style="background-color: rgba(81, 177, 215, 0.556)">test 32</td>
-                        <td class="border border-dark" style="background-color: rgba(81, 177, 215, 0.556)">test 33</td>
-                        <td class="border border-dark" style="background-color: rgba(81, 177, 215, 0.556)">test 34</td>
-                        <td class="border border-dark" style="background-color: rgba(81, 177, 215, 0.556)">test 35</td>
-                        <td class="border border-dark" style="background-color: rgba(81, 177, 215, 0.556)">test 36</td>
-                        <td class="border border-dark" style="background-color: rgba(81, 177, 215, 0.556)">test 37</td>
-                        <td class="border border-dark" style="background-color: rgba(81, 177, 215, 0.556)">test 38</td>
-                        <td class="border border-dark" style="background-color: rgba(81, 177, 215, 0.556)">test 39</td>
-                        <td class="border border-dark" style="background-color: rgba(81, 177, 215, 0.556)">test 40</td>
-                        <td class="border border-dark" style="background-color: rgba(81, 177, 215, 0.556)">test 41</td>
+                    @for ($i=1;$i<=2;$i++)
+                    <tr  style="background-color: rgba(81, 177, 215, 0.556)">
+                        <td class="border boder-dark">{{ $i }}</td>
+                        <td class="border boder-dark">{{ $faker->numerify('2####') }}</td>
+                        <td class="border boder-dark">NEW</td>
+                        <td class="border boder-dark">{{ $faker->numerify('896#########') }}</td>
+                        <td class="border boder-dark">{{ $faker->numerify('01#####') }}</td>
+                        <td class="border boder-dark">N</td>
+                        <td class="border boder-dark">C</td>
+                        <td class="border boder-dark">24</td>
+                        <td class="border boder-dark">{{ $faker->numerify('#000') }}</td>
+                        <td class="border boder-dark">Go DIGI</td>
+                        <td class="border boder-dark">4G Mobile Internet</td>
+                        <td class="border boder-dark">IDD</td>
+                        <td class="border boder-dark">SMS</td>
+                        <td class="border boder-dark">International Roaming</td>
+                        <td class="border boder-dark">Go DIGI 168 Data Bundle</td>
+                        <td class="border boder-dark">MI Go Digi Unlimited</td>
+                        <td class="border boder-dark">Contract Go Digi 168</td>
+                        <td class="border boder-dark">EB-S-{{ $faker->company() }}APR23</td>
+                        <td class="border boder-dark">Vo-LTE</td>
+                        <td class="border boder-dark">Monthly-Unlimited Singapore-FREE</td>
+                        <td class="border boder-dark">Go IDD168-Free Bundle</td>
+                        <td class="border boder-dark">Monthly-GoIDDAsia300mins-FREE</td>
+                        <td class="border boder-dark">Go Roam168-Free Bundle</td>
+                        <td class="border boder-dark">Monthly_GoRoamAdvance - (Free)</td>
+                        <td class="border boder-dark">-</td>
+                        <td class="border boder-dark">-</td>
+                        <td class="border boder-dark">-</td>
+                        <td class="border boder-dark">-</td>
+                        <td class="border boder-dark">-</td>
+                        <td class="border boder-dark">-</td>
+                        <td class="border boder-dark">MAXIS</td>
+                        <td class="border boder-dark">BRN</td>
+                        <td class="border boder-dark">{{ $faker->numerify('200########') }}</td>
+                        <td class="border boder-dark">{{ $faker->company() }}</td>
+                        <td class="border boder-dark">{{ $faker->numerify('########') }}</td>
+                        <td class="border boder-dark">-</td>
+                        <td class="border boder-dark"><input type="checkbox"></td>
+                        <td class="border boder-dark"><a href="#">{{ $faker->date() }}</a></td>
+                        <td class="border boder-dark">Activated</td>
+                        <td class="border boder-dark"><a href="#"><i class="bi bi-pencil-fill text-dark"></i></a></td>
+                        <td class="border boder-dark"><a href="#"><i class="bi bi-x-square-fill text-danger"></i></i></a></td>
                     </tr>
+                    @endfor
                 </tbody>
             </table>
         </div>
@@ -492,49 +502,51 @@
                 </thead>
 
                 <tbody>
-                    <tr>
-                        <td class="border border-dark" style="background-color: rgba(81, 177, 215, 0.556)">test 1</td>
-                        <td class="border border-dark" style="background-color: rgba(81, 177, 215, 0.556)">test 2</td>
-                        <td class="border border-dark" style="background-color: rgba(81, 177, 215, 0.556)">test 3</td>
-                        <td class="border border-dark" style="background-color: rgba(81, 177, 215, 0.556)">test 4</td>
-                        <td class="border border-dark" style="background-color: rgba(81, 177, 215, 0.556)">test 5</td>
-                        <td class="border border-dark" style="background-color: rgba(81, 177, 215, 0.556)">test 6</td>
-                        <td class="border border-dark" style="background-color: rgba(81, 177, 215, 0.556)">test 7</td>
-                        <td class="border border-dark" style="background-color: rgba(81, 177, 215, 0.556)">test 8</td>
-                        <td class="border border-dark" style="background-color: rgba(81, 177, 215, 0.556)">test 9</td>
-                        <td class="border border-dark" style="background-color: rgba(81, 177, 215, 0.556)">test 10</td>
-                        <td class="border border-dark" style="background-color: rgba(81, 177, 215, 0.556)">test 11</td>
-                        <td class="border border-dark" style="background-color: rgba(81, 177, 215, 0.556)">test 12</td>
-                        <td class="border border-dark" style="background-color: rgba(81, 177, 215, 0.556)">test 13</td>
-                        <td class="border border-dark" style="background-color: rgba(81, 177, 215, 0.556)">test 14</td>
-                        <td class="border border-dark" style="background-color: rgba(81, 177, 215, 0.556)">test 15</td>
-                        <td class="border border-dark" style="background-color: rgba(81, 177, 215, 0.556)">test 16</td>
-                        <td class="border border-dark" style="background-color: rgba(81, 177, 215, 0.556)">test 17</td>
-                        <td class="border border-dark" style="background-color: rgba(81, 177, 215, 0.556)">test 18</td>
-                        <td class="border border-dark" style="background-color: rgba(81, 177, 215, 0.556)">test 19</td>
-                        <td class="border border-dark" style="background-color: rgba(81, 177, 215, 0.556)">test 20</td>
-                        <td class="border border-dark" style="background-color: rgba(81, 177, 215, 0.556)">test 21</td>
-                        <td class="border border-dark" style="background-color: rgba(81, 177, 215, 0.556)">test 22</td>
-                        <td class="border border-dark" style="background-color: rgba(81, 177, 215, 0.556)">test 23</td>
-                        <td class="border border-dark" style="background-color: rgba(81, 177, 215, 0.556)">test 24</td>
-                        <td class="border border-dark" style="background-color: rgba(81, 177, 215, 0.556)">test 25</td>
-                        <td class="border border-dark" style="background-color: rgba(81, 177, 215, 0.556)">test 26</td>
-                        <td class="border border-dark" style="background-color: rgba(81, 177, 215, 0.556)">test 27</td>
-                        <td class="border border-dark" style="background-color: rgba(81, 177, 215, 0.556)">test 28</td>
-                        <td class="border border-dark" style="background-color: rgba(81, 177, 215, 0.556)">test 29</td>
-                        <td class="border border-dark" style="background-color: rgba(81, 177, 215, 0.556)">test 30</td>
-                        <td class="border border-dark" style="background-color: rgba(81, 177, 215, 0.556)">test 31</td>
-                        <td class="border border-dark" style="background-color: rgba(81, 177, 215, 0.556)">test 32</td>
-                        <td class="border border-dark" style="background-color: rgba(81, 177, 215, 0.556)">test 33</td>
-                        <td class="border border-dark" style="background-color: rgba(81, 177, 215, 0.556)">test 34</td>
-                        <td class="border border-dark" style="background-color: rgba(81, 177, 215, 0.556)">test 35</td>
-                        <td class="border border-dark" style="background-color: rgba(81, 177, 215, 0.556)">test 36</td>
-                        <td class="border border-dark" style="background-color: rgba(81, 177, 215, 0.556)">test 37</td>
-                        <td class="border border-dark" style="background-color: rgba(81, 177, 215, 0.556)">test 38</td>
-                        <td class="border border-dark" style="background-color: rgba(81, 177, 215, 0.556)">test 39</td>
-                        <td class="border border-dark" style="background-color: rgba(81, 177, 215, 0.556)">test 40</td>
-                        <td class="border border-dark" style="background-color: rgba(81, 177, 215, 0.556)">test 41</td>
+                    @for ($i=1;$i<=2;$i++)
+                    <tr  style="background-color: rgba(81, 177, 215, 0.556)">
+                        <td class="border boder-dark">{{ $i }}</td>
+                        <td class="border boder-dark">{{ $faker->numerify('2####') }}</td>
+                        <td class="border boder-dark">MNP</td>
+                        <td class="border boder-dark">{{ $faker->numerify('896#########') }}</td>
+                        <td class="border boder-dark">{{ $faker->numerify('01#####') }}</td>
+                        <td class="border boder-dark">N</td>
+                        <td class="border boder-dark">C</td>
+                        <td class="border boder-dark">24</td>
+                        <td class="border boder-dark">{{ $faker->numerify('#000') }}</td>
+                        <td class="border boder-dark">Go DIGI</td>
+                        <td class="border boder-dark">4G Mobile Internet</td>
+                        <td class="border boder-dark">IDD</td>
+                        <td class="border boder-dark">SMS</td>
+                        <td class="border boder-dark">International Roaming</td>
+                        <td class="border boder-dark">Go DIGI 168 Data Bundle</td>
+                        <td class="border boder-dark">MI Go Digi Unlimited</td>
+                        <td class="border boder-dark">Contract Go Digi 168</td>
+                        <td class="border boder-dark">EB-S-{{ $faker->company() }}APR23</td>
+                        <td class="border boder-dark">Vo-LTE</td>
+                        <td class="border boder-dark">Monthly-Unlimited Singapore-FREE</td>
+                        <td class="border boder-dark">Go IDD168-Free Bundle</td>
+                        <td class="border boder-dark">Monthly-GoIDDAsia300mins-FREE</td>
+                        <td class="border boder-dark">Go Roam168-Free Bundle</td>
+                        <td class="border boder-dark">Monthly_GoRoamAdvance - (Free)</td>
+                        <td class="border boder-dark">-</td>
+                        <td class="border boder-dark">-</td>
+                        <td class="border boder-dark">-</td>
+                        <td class="border boder-dark">-</td>
+                        <td class="border boder-dark">-</td>
+                        <td class="border boder-dark">-</td>
+                        <td class="border boder-dark">MAXIS</td>
+                        <td class="border boder-dark">BRN</td>
+                        <td class="border boder-dark">{{ $faker->numerify('200########') }}</td>
+                        <td class="border boder-dark">{{ $faker->company() }}</td>
+                        <td class="border boder-dark">{{ $faker->numerify('########') }}</td>
+                        <td class="border boder-dark">-</td>
+                        <td class="border boder-dark"><input type="checkbox"></td>
+                        <td class="border boder-dark"><a href="#">{{ $faker->date() }}</a></td>
+                        <td class="border boder-dark">Activated</td>
+                        <td class="border boder-dark"><a href="#"><i class="bi bi-pencil-fill text-dark"></i></a></td>
+                        <td class="border boder-dark"><a href="#"><i class="bi bi-x-square-fill text-danger"></i></i></a></td>
                     </tr>
+                    @endfor
                 </tbody>
             </table>
         </div>
