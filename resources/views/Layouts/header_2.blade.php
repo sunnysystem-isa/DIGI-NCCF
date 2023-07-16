@@ -50,7 +50,7 @@
                             <!--end::Menu item-->
                             <!--begin::Menu item-->
                             <div class="menu-item px-3">
-                                <a href="/crm-goup" class="menu-link px-5">3. CRM Groups</a>
+                                <a href="/crm-group" class="menu-link px-5">3. CRM Groups</a>
                             </div>
                             <!--end::Menu item-->
                             <!--begin::Menu item-->
